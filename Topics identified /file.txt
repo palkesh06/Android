@@ -1,0 +1,13 @@
+1. Layout and Types of Layouts. 
+2. Intents {
+	pending Intents, 
+	implicit intens, 
+	EXPLICIT intents, 
+	intent flags
+}
+3. startActivityForResult() and onActivityResult()
+4. SharedPreferences 
+5. ViewBinding
+6. layoutInflater
+7. DataBindingUtil
+8. Task and back Stack - not Clear (Re-Visit)
