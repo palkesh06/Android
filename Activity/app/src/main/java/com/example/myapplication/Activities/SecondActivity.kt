@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.myapplication.Activities
 
 import android.content.Intent
 import android.content.SharedPreferences
@@ -6,8 +6,13 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import androidx.security.crypto.EncryptedSharedPreferences
 import androidx.security.crypto.MasterKeys
+import com.example.myapplication.Adapters.PaginationAdapter
+import com.example.myapplication.R
+
 
 class SecondActivity : AppCompatActivity() {
 
@@ -16,6 +21,11 @@ class SecondActivity : AppCompatActivity() {
     private var editTextViewMessage : String? = null
     private lateinit var editTextView: TextView
     private lateinit var encryptedSharedPreferences : SharedPreferences
+
+    private var isLoading = false
+    private var currentPage = 0
+    private var adapter: PaginationAdapter? = null
+    private lateinit var recyclerView: RecyclerView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -42,6 +52,26 @@ class SecondActivity : AppCompatActivity() {
         editTextView = findViewById(R.id.editTextView)
         editTextView.text = editTextViewMessage ?: getMessageFromSharedPreference().also { editTextViewMessage = it }
 
+
+        recyclerView = findViewById(R.id.recyclerView)
+        val layoutManager = LinearLayoutManager(this)
+        recyclerView.layoutManager = layoutManager
+
+        val items: MutableList<String> = ArrayList()
+        adapter = PaginationAdapter(items)
+        recyclerView.adapter = adapter
+
+        loadMoreData()
+
+        recyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+                super.onScrolled(recyclerView, dx, dy)
+                if (!recyclerView.canScrollVertically(1) && !isLoading) {
+                    isLoading = true
+                    loadMoreData()
+                }
+            }
+        })
 
         handleImplicitIntent()
     }
@@ -103,5 +133,19 @@ class SecondActivity : AppCompatActivity() {
                 textView.text = sharedText
             }
         }
+    }
+
+    private fun loadMoreData() {
+        // Simulate network request
+        recyclerView.postDelayed(Runnable {
+            val newItems: MutableList<String> = ArrayList()
+            val start = currentPage * 20
+            for (i in start until  start + 20) {
+                newItems.add("Item $i")
+            }
+            adapter?.addItems(newItems)
+            isLoading = false
+            currentPage++
+        }, 2000) // Simulate 2 seconds delay
     }
 }

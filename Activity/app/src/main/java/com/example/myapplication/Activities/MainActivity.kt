@@ -1,27 +1,36 @@
-package com.example.myapplication
+package com.example.myapplication.Activities
 
+import android.Manifest
 import android.app.AlarmManager
 import android.app.PendingIntent
 import android.content.ActivityNotFoundException
+import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
+import android.content.IntentFilter
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.os.SystemClock
 import android.util.Log
+import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
-import android.Manifest
 import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.ViewModelProvider
+import com.example.myapplication.BroadCastReceivers.ScreenUnlockReceiver
+import com.example.myapplication.Fragments.Fragment
+import com.example.myapplication.R
+import com.example.myapplication.Services.DownloadService
+import com.example.myapplication.ViewModels.MainViewModel
+
 
 class MainActivity : AppCompatActivity(), Fragment.OnFragmentInteractionListener{
     lateinit var  tvRef : TextView
     private lateinit var sharedViewModel: MainViewModel
-
+    private var screenUnlockReceiver: BroadcastReceiver? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,7 +42,7 @@ class MainActivity : AppCompatActivity(), Fragment.OnFragmentInteractionListener
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         }
         val openAnotherActivity = findViewById<Button>(R.id.openAnotherActivityButton)
-        openAnotherActivity.setOnClickListener{
+        openAnotherActivity.setOnClickListener {
             scheduledDelayedLaunch()
         }
         val cameraPermissions: Button = findViewById(R.id.cameraPermission)
@@ -56,6 +65,21 @@ class MainActivity : AppCompatActivity(), Fragment.OnFragmentInteractionListener
                 .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
                 .commit()
         }
+
+
+        findViewById<Button>(R.id.start_service_button).setOnClickListener { v: View? -> startDownloadService() }
+        findViewById<Button>(R.id.stop_service_button).setOnClickListener { v: View? -> stopDownloadService() }
+
+
+        // Initialize the BroadcastReceiver
+        screenUnlockReceiver = ScreenUnlockReceiver()
+
+
+        // Create an IntentFilter for ACTION_USER_PRESENT
+        val filter = IntentFilter(Intent.ACTION_USER_PRESENT)
+
+        // Register the receiver with the filter
+        registerReceiver(screenUnlockReceiver, filter);
     }
 
     override fun onRequestPermissionsResult(
@@ -94,6 +118,20 @@ class MainActivity : AppCompatActivity(), Fragment.OnFragmentInteractionListener
 
     override fun onDestroy() {
         super.onDestroy()
+        // Unregister the receiver to prevent memory leaks
+        if (screenUnlockReceiver != null) {
+            unregisterReceiver(screenUnlockReceiver);
+        }
+    }
+
+    private fun startDownloadService() {
+        val intent = Intent(this, DownloadService::class.java)
+        startService(intent)
+    }
+
+    private fun stopDownloadService() {
+        val intent = Intent(this, DownloadService::class.java)
+        stopService(intent)
     }
 
     override fun onButtonClicked() {

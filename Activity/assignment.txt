@@ -1,0 +1,82 @@
+Comprehensive Android Activities Assignment
+Part 1: Basic Concepts
+
+Task 1: Create a Simple Activity
+Create a new Android project.
+Add a new activity named MainActivity.
+Design a simple layout for MainActivity with a TextView displaying "Hello, World!".
+Task 2: Activity Lifecycle
+Implement lifecycle methods (onCreate, onStart, onResume, onPause, onStop, onDestroy) in MainActivity.
+Add Log statements in each lifecycle method to print messages to Logcat when each method is called.
+Run the app and observe the logs to understand the activity lifecycle.
+
+Part 2: Intermediate Concepts
+
+Task 3: Intents and Activity Navigation
+Create a second activity named SecondActivity.
+Add a button to MainActivity that navigates to SecondActivity when clicked.
+Pass a string message from MainActivity to SecondActivity using an Intent. Display the received message in SecondActivity.
+Task 4: Handling Configuration Changes
+In SecondActivity, add a TextView and a counter that increments every time the activity is recreated (e.g., on configuration changes like rotation).
+Use onSaveInstanceState and onRestoreInstanceState to save and restore the counter value across configuration changes.
+
+Part 3: Advanced Concepts
+
+Task 5: Fragment Integration
+Create a Fragment named ExampleFragment.
+Add ExampleFragment to MainActivity dynamically using a FragmentTransaction.
+Add a button in ExampleFragment that updates a TextView in MainActivity.
+Task 6: Activity Communication
+Implement a communication interface between MainActivity and ExampleFragment to handle interactions.
+When a button in ExampleFragment is clicked, it should trigger a method in MainActivity to change the text of a TextView.
+Task 7: Using ViewModels and LiveData
+Create a ViewModel class named SharedViewModel.
+Use LiveData in SharedViewModel to hold a string value.
+Update the LiveData from ExampleFragment and observe the changes in MainActivity to update a TextView.
+
+
+Part 4: Advanced Activity and System Concepts
+
+Task 8: Back Stack and Task Management
+Add a third activity named ThirdActivity.
+Implement navigation from SecondActivity to ThirdActivity.
+Demonstrate different back stack behaviors using Intent flags (e.g., FLAG_ACTIVITY_NEW_TASK, FLAG_ACTIVITY_CLEAR_TOP).
+Task 9: Requesting Permissions at Runtime
+Implement a feature in MainActivity that requires a runtime permission (e.g., accessing the camera).
+Request the necessary permission at runtime.
+Handle the permission result and provide feedback to the user.
+Task 10: Secure Data Handling
+Implement secure storage of sensitive data in MainActivity using SharedPreferences with encryption.
+Task 11: Launch Modes
+Demonstrate different activity launch modes (standard, singleTop, singleTask, singleInstance) by modifying the manifest file and observing the behavior.
+Task 12: Pending Intents
+Create a PendingIntent to trigger an alarm notification from MainActivity.
+Handle the alarm notification in a BroadcastReceiver.
+Task 13: Intent Flags and Task Affinities
+Modify task affinities for MainActivity and SecondActivity and demonstrate their effects on task management.
+Task 14: Custom Activity Transitions
+Implement custom animations for activity transitions between MainActivity and SecondActivity.
+
+Part 5: System Integration
+
+Task 15: Integrating with Services
+Create a background service that performs a task (e.g., downloading a file).
+Integrate the service with MainActivity to start and stop the service.
+Task 16: Using BroadcastReceivers
+Create a BroadcastReceiver to listen for system broadcasts (e.g., battery low).
+Register the receiver in MainActivity and handle the broadcast.
+
+
+Part 6: Performance Optimization
+
+Task 17: Optimizing UI Performance
+Optimize the UI performance of MainActivity by using RecyclerView for displaying a large list of items efficiently.
+Task 18: Handling Large Datasets
+Implement pagination in a RecyclerView to handle large datasets efficiently.
+
+
+Part 7: Navigation Architecture Component
+
+Task 19: Navigation Graphs and Safe Args
+Refactor the project to use the Navigation Component for managing navigation between MainActivity, SecondActivity, ThirdActivity, and ExampleFragment.
+Use SafeArgs to pass data between destinations.
