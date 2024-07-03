@@ -74,9 +74,3 @@ Optimize the UI performance of MainActivity by using RecyclerView for displaying
 Task 18: Handling Large Datasets
 Implement pagination in a RecyclerView to handle large datasets efficiently.
 
-
-Part 7: Navigation Architecture Component
-
-Task 19: Navigation Graphs and Safe Args
-Refactor the project to use the Navigation Component for managing navigation between MainActivity, SecondActivity, ThirdActivity, and ExampleFragment.
-Use SafeArgs to pass data between destinations.
