@@ -29,7 +29,7 @@
    - **Objective:** Understand how to use ViewBinding with Fragments.
 
 7. **Dialogs with Fragments**
-   - **Task:** Create a `DialogFragment` that shows an `AlertDialog` with a message and a button. Handle the button click within the `DialogFragment`.
+   - **Task:** Create a `DialogFragment` that shows an `AlertDialog` with a message and a button. Handle the button click within the `DialogFragment` also if possible handle this button click on differnt fragment also .
    - **Objective:** Learn how to create and manage dialogs using DialogFragment.
 
 8. **Navigation Component**
@@ -37,10 +37,6 @@
    - **Objective:** Understand the basics of using Navigation Component for navigating between Fragments.
 
 #### **Part 3: Advanced Concepts**
-
-9. **Fragment Communication Patterns**
-   - **Task:** Use a shared ViewModel to share data between two Fragments. Update the ViewModel data from one Fragment and observe the changes in the other Fragment.
-   - **Objective:** Learn how to use ViewModel for Fragment communication.
 
 10. **Fragment Scenarios and Multi-pane Layouts**
     - **Task:** Create a master-detail layout using Fragments. Implement a list in the master Fragment and display details in the detail Fragment based on list item clicks.
@@ -53,18 +49,6 @@
 12. **Fragment Result API**
     - **Task:** Pass data between two Fragments using `setFragmentResult` and `setFragmentResultListener`. Trigger an action in one Fragment and observe the result in another.
     - **Objective:** Understand how to use the Fragment Result API for inter-Fragment communication.
-
-13. **Advanced Navigation**
-    - **Task:** Implement nested navigation graphs in your app. Create a complex navigation flow with multiple nested graphs and global actions.
-    - **Objective:** Learn advanced navigation techniques using the Navigation Component.
-
-14. **Memory Management**
-    - **Task:** Identify potential memory leaks in your Fragment implementation. Use tools like LeakCanary to detect and fix memory leaks.
-    - **Objective:** Understand best practices for managing memory and avoiding leaks in Fragments.
-
-15. **Testing Fragments**
-    - **Task:** Write unit tests for your Fragment logic using JUnit and Mockito. Implement UI tests using Espresso and FragmentScenario.
-    - **Objective:** Learn how to test Fragments effectively.
 
 16. **Fragment Factories**
     - **Task:** Use a `FragmentFactory` to handle custom Fragment instantiation. Inject dependencies into Fragments using the FragmentFactory.
@@ -86,10 +70,6 @@
     - **Task:** Implement data binding in a Fragment. Use two-way data binding to handle user input and update the UI reactively.
     - **Objective:** Understand how to use data binding in Fragments.
 
-21. **Using Conductor**
-    - **Task:** Set up and use Conductor library as an alternative to Fragments. Implement a basic navigation flow using Conductor.
-    - **Objective:** Explore Conductor as an alternative to the traditional Fragment-based approach.
-
 22. **Fragment State Restoration**
     - **Task:** Implement state restoration in Fragments using `onSaveInstanceState()` and `SavedStateHandle`. Ensure the state is preserved across configuration changes.
     - **Objective:** Learn how to handle state restoration in Fragments.
@@ -106,6 +86,3 @@
     - **Task:** Create different types of dialogs (e.g., `AlertDialog`, `BottomSheetDialogFragment`) and handle user interactions.
     - **Objective:** Understand the different types of dialogs and how to use them.
 
-26. **Using Adapters with Fragments**
-    - **Task:** Implement a `RecyclerView` with an `Adapter` in a Fragment. Use `ListAdapter` and `DiffUtil` for efficient list updates.
-    - **Objective:** Learn how to use adapters with Fragments for displaying lists.
