@@ -38,51 +38,47 @@
 
 #### **Part 3: Advanced Concepts**
 
-10. **Fragment Scenarios and Multi-pane Layouts**
+9. **Fragment Scenarios and Multi-pane Layouts**
     - **Task:** Create a master-detail layout using Fragments. Implement a list in the master Fragment and display details in the detail Fragment based on list item clicks.
     - **Objective:** Understand how to design multi-pane layouts for different screen sizes.
 
-11. **Fragment Lifecycle and ViewModel**
+10. **Fragment Lifecycle and ViewModel**
     - **Task:** Use ViewModel to handle configuration changes in a Fragment. Ensure the data persists across configuration changes like screen rotations.
     - **Objective:** Learn how to use ViewModel to manage data persistence and handle configuration changes.
 
-12. **Fragment Result API**
+11. **Fragment Result API**
     - **Task:** Pass data between two Fragments using `setFragmentResult` and `setFragmentResultListener`. Trigger an action in one Fragment and observe the result in another.
     - **Objective:** Understand how to use the Fragment Result API for inter-Fragment communication.
 
-16. **Fragment Factories**
-    - **Task:** Use a `FragmentFactory` to handle custom Fragment instantiation. Inject dependencies into Fragments using the FragmentFactory.
-    - **Objective:** Understand how to use FragmentFactory for custom instantiation and dependency injection.
-
-17. **Fragment Animations and Transitions**
+12. **Fragment Animations and Transitions**
     - **Task:** Implement custom animations for Fragment transitions. Use shared element transitions to create a smooth navigation experience.
     - **Objective:** Learn how to apply animations and transitions in Fragment navigation.
 
-18. **Handling Configuration Changes**
-    - **Task:** Implement a solution to retain Fragment instances across configuration changes. Use `ViewModel` and `SavedStateHandle` to manage state.
+13. **Handling Configuration Changes**
+    - **Task:** Implement a solution to retain Fragment instances across configuration changes. Use `ViewModel` and `SavedStateHandle` to manage state , etc.
     - **Objective:** Understand how to handle configuration changes and retain Fragment state.
 
-19. **Modular Fragment Architecture**
+14. **Modular Fragment Architecture**(Create a base fragment for reusuable code)
     - **Task:** Design an app with a modular Fragment architecture. Create reusable Fragments and communicate between modules using a shared ViewModel.
     - **Objective:** Learn how to design modular and reusable Fragment-based architectures.
 
-20. **Fragment Data Binding**
+15. **Fragment Data Binding**
     - **Task:** Implement data binding in a Fragment. Use two-way data binding to handle user input and update the UI reactively.
     - **Objective:** Understand how to use data binding in Fragments.
 
-22. **Fragment State Restoration**
+16. **Fragment State Restoration**
     - **Task:** Implement state restoration in Fragments using `onSaveInstanceState()` and `SavedStateHandle`. Ensure the state is preserved across configuration changes.
     - **Objective:** Learn how to handle state restoration in Fragments.
 
-23. **Handling Fragment Back Stack**
+17. **Handling Fragment Back Stack**
     - **Task:** Manage custom back stack behavior in your app. Implement a custom back stack handler to manage Fragment navigation.
     - **Objective:** Understand how to handle and manage the Fragment back stack effectively.
 
-24. **Saving State with Fragments**
+18. **Saving State with Fragments**
     - **Task:** Implement `onSaveInstanceState()` to save and restore Fragment state. Use `SavedStateHandle` for saving ViewModel state.
     - **Objective:** Learn how to save and restore Fragment state.
 
-25. **Displaying Dialogs with DialogFragment and Other Types of Fragments**
+19. **Displaying Dialogs with DialogFragment and Other Types of Fragments**
     - **Task:** Create different types of dialogs (e.g., `AlertDialog`, `BottomSheetDialogFragment`) and handle user interactions.
     - **Objective:** Understand the different types of dialogs and how to use them.
 

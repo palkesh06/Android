@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         setContentView(binding.root)
 
         binding.Button.setOnClickListener {
-            performFragmentTransactions()
+            customFragmentTansactions()
         }
 
         supportFragmentManager.setFragmentResultListener("key", this) { requestKey , bundle ->
@@ -34,6 +34,16 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
             fragmentTransaction.remove(currentFragment).commit()
         } else {
             fragmentTransaction.add(R.id.fragment_container, MyFragment.newInstance()).commit()
+        }
+    }
+
+    private fun customFragmentTansactions() {
+        val currentFragment: Fragment? = supportFragmentManager.findFragmentById(R.id.fragment_container)
+        val fragmentTransaction: NavigationManager = NavigationManager(supportFragmentManager, R.id.fragment_container)
+        if ( currentFragment != null){
+            fragmentTransaction.remove(currentFragment)
+        } else {
+            fragmentTransaction.add(R.id.fragment_container, MyFragment.newInstance())
         }
     }
 }

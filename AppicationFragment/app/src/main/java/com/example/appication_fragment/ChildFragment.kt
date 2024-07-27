@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.core.os.bundleOf
 import com.example.appication_fragment.databinding.FragmentChildBinding
 
-class ChildFragment : Fragment() {
+class ChildFragment : BaseFragment() {
 
     private var _binding: FragmentChildBinding? = null
     private val binding get() = _binding!!

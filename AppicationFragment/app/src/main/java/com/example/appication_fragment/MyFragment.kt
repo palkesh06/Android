@@ -10,7 +10,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 
 
-class MyFragment : Fragment() {
+class MyFragment : BaseFragment() {
 
     private val TAG = "MyFragmentLifecycle"
     private lateinit var tv :TextView
