@@ -1,15 +1,15 @@
 
 3. startActivityForResult() and onActivityResult()
-4. SharedPreferences 
+4. SharedPreferences
 6. layoutInflater
 8. Task and back Stack - not Clear (Re-Visit)
 
 
 
 
-Activities 
-Fragments 
-Intents 
+Activities - completed 
+Fragments - completed
+Intents - completed
 Layouts
 SharedPrefences 
 Work manager 
