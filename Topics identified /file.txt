@@ -1,33 +1,49 @@
-
-3. startActivityForResult() and onActivityResult()
-4. SharedPreferences
-6. layoutInflater
-8. Task and back Stack - not Clear (Re-Visit)
-
-
+Task and back Stack - not Clear (Re-Visit)
+Activities - completed
+Fragments - base + types ( completed)
+Intents - filter, explict, implicit ( completed)
+SharedPreferences - completed
 
 
-Activities - completed 
-Fragments - completed
-Intents - completed
-Layouts
-SharedPrefences 
-Work manager 
-Custom views
-Recycler View 
-Coroutines 
-Retrofit 
-LiveData 
-ViewModel 
-Views 
-Firebase integration
-MVVVM 
-Services 
-BroadCast receivers 
-Content provider 
-Room database 
-DATA binding 
-Background processing 
+
+
+ui Layer - viewBinding, databinding, lifecycle, viewModel, liveData, paging
+
+data layer - Data Store, WorkManager.
+
+Design pattern - Builder, dependency , factory, observer.
+
+Architecture - MVVM , MVP , MVI , MVC, clean architectire
+
+Network - REtrofit, okhttp, ktor, okio, Apollo-Android.
+
+Image loading - GLide, coil , fresco , Picasso. 
+
+local storage - sqLite, sharedpreference , DataStore, Realm 
+
+ASynchronous - Coroutines, Threads, WorkManager, RxJava/Rxkotlin.
+
+Ci/CD - Github Actions, jenkins, Bitrise , travis CI , Circle CI.
+
+QA & App Publishing- Firebase App Distribution , Google Play store .
+
+Code Analysis & Test - Linter, UNit testing , Debugging, benchmark .
+
+
 App links - TabLayout, viewPager , custom back navigation 
-View binding 
-Database
+
+Service - Google( Google play service , Google maps ) , Firebase(Auth, crashlytics, Cloud messaging , Firestore, Realtime db), Advertisement( Google AdMob, Meta Audience Network, MoPub).
+
+User Interface - Layouts (Constraint , motion , linear, frame, recycler ), Styles( light, dark  theme), Design Guides( Material  , Material You , neumorphism ), Message( TOast, snackbar, Notification ), Animation(ValueAnimator, ObjectAnimator, Lottie, Material motion), Custom views.
+
+App Manifest - Package, Application Id. 
+
+Android os - File persmission , Resoruce isolation , process management, Multi-user linux.
+
+Android package - Apk, AAB. 
+
+Navigation components - navigation Graph , global actions, destination , deeplinks 
+
+Compose UI -
+ 1. Recomposition - Snapshot
+ To be list down. 
