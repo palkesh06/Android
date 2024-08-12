@@ -1,40 +1,44 @@
 Task and back Stack - not Clear (Re-Visit)
 Activities - completed
-Fragments - base + types ( completed)
+Fragments - base + types (completed)
 Intents - filter, explict, implicit ( completed)
 SharedPreferences - completed
+ui Layer - viewBinding, databinding, lifecycle, viewModel, liveData, paging(implementation pending) - completed.
+data layer - Data Store, WorkManager( Implementation Pending).
+Design pattern - Builder(Pending), dependency , factory, observer.
 
 
 
 
-ui Layer - viewBinding, databinding, lifecycle, viewModel, liveData, paging
 
-data layer - Data Store, WorkManager.
-
-Design pattern - Builder, dependency , factory, observer.
 
 Architecture - MVVM , MVP , MVI , MVC, clean architectire
 
+
+ASynchronous - Coroutines, Threads, WorkManager, RxJava/Rxkotlin, Kotlin Doc.
+
+
 Network - REtrofit, okhttp, ktor, okio, Apollo-Android.
 
-Image loading - GLide, coil , fresco , Picasso. 
 
-local storage - sqLite, sharedpreference , DataStore, Realm 
+User Interface - Layouts (Constraint , motion , linear, frame, recycler ), Styles( light, dark  theme), Design Guides( Material  , Material You , neumorphism ), Message( TOast, snackbar, Notification ), Animation(ValueAnimator, ObjectAnimator, Lottie, Material motion), Custom views.
 
-ASynchronous - Coroutines, Threads, WorkManager, RxJava/Rxkotlin.
-
-Ci/CD - Github Actions, jenkins, Bitrise , travis CI , Circle CI.
-
-QA & App Publishing- Firebase App Distribution , Google Play store .
-
-Code Analysis & Test - Linter, UNit testing , Debugging, benchmark .
+App links - TabLayout, viewPager , custom back navigation.
 
 
-App links - TabLayout, viewPager , custom back navigation 
+local storage - sqLite, sharedpreference , DataStore, Realm , Room, Image loading - GLide, coil , fresco , Picasso.
 
 Service - Google( Google play service , Google maps ) , Firebase(Auth, crashlytics, Cloud messaging , Firestore, Realtime db), Advertisement( Google AdMob, Meta Audience Network, MoPub).
 
-User Interface - Layouts (Constraint , motion , linear, frame, recycler ), Styles( light, dark  theme), Design Guides( Material  , Material You , neumorphism ), Message( TOast, snackbar, Notification ), Animation(ValueAnimator, ObjectAnimator, Lottie, Material motion), Custom views.
+
+
+Ci/CD - Github Actions, jenkins, Bitrise , travis CI , Circle CI.
+
+QA & App Publishing- Firebase App Distribution , Google Play store.
+
+Code Analysis & Test - Linter, UNit testing , Debugging, benchmark.
+
+
 
 App Manifest - Package, Application Id. 
 
